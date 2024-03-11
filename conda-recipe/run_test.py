@@ -4,6 +4,7 @@ import os
 import sys
 import shutil
 import re
+from security import safe_command
 
 nose_run = [
     "nosetests",
@@ -15,6 +16,6 @@ nose_run = [
     "--with-doctest",
     "--doctest-options=+NORMALIZE_WHITESPACE,+ELLIPSIS"]
 
-res = subprocess.call(nose_run)
+res = safe_command.run(subprocess.call, nose_run)
 
 sys.exit(res)
