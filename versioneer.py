@@ -338,8 +338,6 @@ public domain. The `_version.py` that it creates is also in the public
 domain.
 
 """
-
-from __future__ import print_function
 from security import safe_command
 
 try:
